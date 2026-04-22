@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saúde em Casa</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background: #004080;
+      color: white;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: #f4f4f4;
+    }
+
+    .hero h2 {
+      margin-bottom: 10px;
+    }
+
+    .hero button {
+      padding: 10px 20px;
+      background: #004080;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 20px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 250px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #004080;
+      color: white;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<header>
+  <h1>Saúde em Casa</h1>
+  <nav>
+    <a href="#">Início</a>
+    <a href="#">Sobre</a>
+    <a href="#">Contato</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Bem-vindo ao seu novo site 🚀</h2>
+  <p>Hospedado com GitHub Pages</p>
+  <button onclick="mostrarMensagem()">Clique aqui</button>
+</section>
+
+<section class="cards">
+  <div class="card">
+    <h3>Atendimento</h3>
+    <p>Serviços de saúde acessíveis</p>
+  </div>
+
+  <div class="card">
+    <h3>Consultas</h3>
+    <p>Agendamento simples e rápido</p>
+  </div>
+
+  <div class="card">
+    <h3>Suporte</h3>
+    <p>Atendimento humanizado</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 - Saúde em Casa</p>
+</footer>
+
+<script>
+  function mostrarMensagem() {
+    alert("Site funcionando perfeitamente 🚀");
+  }
+</script>
+
+</body>
+</html>
