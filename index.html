@@ -1,121 +1,238 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
+  <title>Observatório de Integridade Gráfica</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Saúde em Casa</title>
 
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
+      color: #1f2937;
+      background: #ffffff;
     }
 
+    .container {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+    }
+
+    /* HEADER */
     header {
-      background: #004080;
-      color: white;
-      padding: 15px;
+      background: #ffffff;
+      border-bottom: 1px solid #d1d5db;
+      padding: 15px 0;
+    }
+
+    header .container {
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
-    nav a {
-      color: white;
-      margin-left: 15px;
-      text-decoration: none;
-      font-weight: bold;
+    header h1 {
+      font-size: 18px;
+      margin: 0;
+      color: #0f3557;
     }
 
+    nav a {
+      margin-left: 15px;
+      text-decoration: none;
+      color: #1f2937;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #0f3557;
+    }
+
+    /* HERO */
     .hero {
-      text-align: center;
-      padding: 60px 20px;
-      background: #f4f4f4;
+      background: #f3f4f6;
+      padding: 60px 0;
     }
 
     .hero h2 {
-      margin-bottom: 10px;
+      font-size: 28px;
+      margin-bottom: 15px;
+      color: #0f3557;
     }
 
-    .hero button {
-      padding: 10px 20px;
-      background: #004080;
+    .hero p {
+      font-size: 16px;
+      max-width: 600px;
+    }
+
+    .btn {
+      margin-top: 20px;
+      display: inline-block;
+      background: #0f3557;
       color: white;
-      border: none;
-      cursor: pointer;
+      padding: 12px 20px;
+      text-decoration: none;
       border-radius: 5px;
     }
 
+    /* SECTIONS */
+    .section {
+      padding: 50px 0;
+    }
+
+    .section h3 {
+      color: #0f3557;
+      margin-bottom: 20px;
+    }
+
     .cards {
-      display: flex;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
-      padding: 40px 20px;
-      flex-wrap: wrap;
     }
 
     .card {
-      background: white;
+      border: 1px solid #e5e7eb;
       padding: 20px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      width: 250px;
       border-radius: 8px;
-      text-align: center;
+      background: white;
     }
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #004080;
+    /* FORM */
+    input {
+      width: 100%;
+      max-width: 500px;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #cbd5e1;
+      border-radius: 5px;
+    }
+
+    button {
+      background: #0f3557;
       color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0f3557;
+      color: white;
+      padding: 30px 0;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin: 5px 0;
+      font-size: 14px;
     }
   </style>
-
 </head>
 
 <body>
 
-<header>
-  <h1>Saúde em Casa</h1>
-  <nav>
-    <a href="#">Início</a>
-    <a href="#">Sobre</a>
-    <a href="#">Contato</a>
-  </nav>
-</header>
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <h1>Observatório de Integridade Gráfica</h1>
+      <nav>
+        <a href="#inicio">Início</a>
+        <a href="#como">Como funciona</a>
+        <a href="#analisar">Analisar</a>
+        <a href="#transparencia">Transparência</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
 
-<section class="hero">
-  <h2>Bem-vindo ao seu novo site 🚀</h2>
-  <p>Hospedado com GitHub Pages</p>
-  <button onclick="mostrarMensagem()">Clique aqui</button>
-</section>
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="container">
+      <h2>Análise técnica de gráficos e dados</h2>
+      <p>
+        Detecte distorções visuais, valide boas práticas estatísticas e gere relatórios técnicos
+        para gráficos publicados na mídia.
+      </p>
+      <a href="#analisar" class="btn">Enviar gráfico</a>
+    </div>
+  </section>
 
-<section class="cards">
-  <div class="card">
-    <h3>Atendimento</h3>
-    <p>Serviços de saúde acessíveis</p>
-  </div>
+  <!-- SERVIÇOS -->
+  <section class="section" id="como">
+    <div class="container">
+      <h3>Como funciona</h3>
 
-  <div class="card">
-    <h3>Consultas</h3>
-    <p>Agendamento simples e rápido</p>
-  </div>
+      <div class="cards">
+        <div class="card">
+          <strong>Upload</strong>
+          <p>Envie um gráfico ou imagem para análise.</p>
+        </div>
 
-  <div class="card">
-    <h3>Suporte</h3>
-    <p>Atendimento humanizado</p>
-  </div>
-</section>
+        <div class="card">
+          <strong>Análise</strong>
+          <p>O sistema verifica distorções visuais e inconsistências.</p>
+        </div>
 
-<footer>
-  <p>© 2026 - Saúde em Casa</p>
-</footer>
+        <div class="card">
+          <strong>Relatório</strong>
+          <p>Receba um diagnóstico técnico detalhado.</p>
+        </div>
 
-<script>
-  function mostrarMensagem() {
-    alert("Site funcionando perfeitamente 🚀");
-  }
-</script>
+        <div class="card">
+          <strong>Correção</strong>
+          <p>Geração de gráfico corrigido conforme boas práticas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANALISAR -->
+  <section class="section" id="analisar">
+    <div class="container">
+      <h3>Analisar gráfico</h3>
+
+      <input type="file">
+      <input type="text" placeholder="Informe a fonte (URL ou veículo)">
+      <button>Processar análise</button>
+    </div>
+  </section>
+
+  <!-- TRANSPARÊNCIA -->
+  <section class="section" id="transparencia">
+    <div class="container">
+      <h3>Transparência</h3>
+
+      <div class="cards">
+        <div class="card">
+          <strong>Erros mais comuns</strong>
+          <p>Gráficos 3D e distorções de escala lideram os problemas.</p>
+        </div>
+
+        <div class="card">
+          <strong>Ranking de fontes</strong>
+          <p>Avaliação de qualidade por veículo de comunicação.</p>
+        </div>
+
+        <div class="card">
+          <strong>Indicadores</strong>
+          <p>Índice de conformidade baseado em boas práticas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contato">
+    <div class="container">
+      <p><strong>Observatório de Integridade Gráfica</strong></p>
+      <p>Email: contato@exemplo.com</p>
+      <p>Projeto educacional e de transparência de dados</p>
+    </div>
+  </footer>
 
 </body>
 </html>
